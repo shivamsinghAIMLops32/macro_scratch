@@ -8,7 +8,7 @@ macro_rules! my_vec {
     //:expr: This is called a designator. It tells the compiler what kind of Rust code to expect.
     // In this case, we are saying that the macro will take an expression as an argument. An expression can be a literal, a variable, a function call, etc.
     ($( $element:expr ),*) => {{
-        let mut temp_vec = Vec::new();
+        let mut temp_vec =  Vec::new();
         //use $( ... )* inside the generated code block, it unrolls and duplicates that code for every item it caught
        $(
                 temp_vec.push($element);
